@@ -172,7 +172,7 @@ const std::string& Trill::getNameFromDevice(Device device)
 {
 	try {
 		return trillDefaults.at(device).name;
-	} catch (std::exception e) {
+	} catch (std::exception const &e) {
 		return trillDefaults.at(Device::UNKNOWN).name;
 	}
 }
@@ -208,7 +208,7 @@ const std::string& Trill::getNameFromMode(Mode mode)
 {
 	try {
 		return trillModes.at(mode);
-	} catch (std::exception e) {
+	} catch (std::exception const &e) {
 		return trillModes.at(Mode::AUTO);
 	}
 }
