@@ -374,7 +374,7 @@ int Trill::setIDACValue(uint8_t value) {
 
 int Trill::setMinimumTouchSize(float minSize) {
 	unsigned int bytesToWrite = 4;
-	uint16_t size;
+	uint16_t size = 0;
 	float maxMinSize = (1<<16) - 1;
 	if(maxMinSize > minSize / sizeRescale) // clipping to the max value we can transmit
 		minSize = maxMinSize;
